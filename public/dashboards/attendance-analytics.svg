@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0B1F4D"/>
+      <stop offset="100%" stop-color="#162850"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4A017"/>
+      <stop offset="100%" stop-color="#e8b82a"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4A017"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+    <clipPath id="chartArea">
+      <rect x="60" y="120" width="340" height="150"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" rx="12" fill="#0d0d1a"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="52" rx="12" fill="url(#headerGrad)"/>
+  <rect x="0" y="40" width="800" height="12" fill="url(#headerGrad)"/>
+  <circle cx="20" cy="26" r="5" fill="#D4A017"/>
+  <text x="34" y="30" fill="#f1f1f7" font-size="13" font-weight="600">Amakio</text>
+  <text x="80" y="30" fill="#6b6b8d" font-size="11">| School Operating System</text>
+  <rect x="700" y="16" width="80" height="22" rx="11" fill="rgba(212,160,23,0.15)"/>
+  <text x="713" y="31" fill="#D4A017" font-size="10" font-weight="600">ATTENDANCE</text>
+
+  <!-- Main Title -->
+  <text x="30" y="78" fill="#f1f1f7" font-size="18" font-weight="700">Attendance Analytics</text>
+  <text x="30" y="96" fill="#6b6b8d" font-size="11">Term 2 — 2024/2025 &#160;|&#160; Updated 13 Jun 2026</text>
+
+  <!-- Date Range -->
+  <rect x="600" y="64" width="170" height="28" rx="6" fill="#14142a" stroke="#1e1e3a" stroke-width="1"/>
+  <text x="614" y="82" fill="#9494b8" font-size="10">Jan 6 – Jun 13, 2026</text>
+  <path d="M758 74 l-6 6 l6 6" fill="none" stroke="#9494b8" stroke-width="1.2"/>
+
+  <!-- Summary Cards Row -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="110" width="130" height="70" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="52" y="134" fill="#6b6b8d" font-size="9" font-weight="500">TOTAL STUDENTS</text>
+    <text x="52" y="158" fill="#f1f1f7" font-size="24" font-weight="800">584</text>
+    <text x="120" y="158" fill="#9494b8" font-size="10">+12</text>
+    <text x="118" y="169" fill="#10B981" font-size="8">▲ 2.1%</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="175" y="110" width="130" height="70" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="197" y="134" fill="#6b6b8d" font-size="9" font-weight="500">AVERAGE %</text>
+    <text x="197" y="158" fill="#10B981" font-size="24" font-weight="800">94.3%</text>
+    <text x="252" y="158" fill="#10B981" font-size="10">+3.8%</text>
+    <text x="250" y="169" fill="#10B981" font-size="8">▲ vs Term 1</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="320" y="110" width="130" height="70" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="342" y="134" fill="#6b6b8d" font-size="9" font-weight="500">DAYS TO DATE</text>
+    <text x="342" y="158" fill="#f1f1f7" font-size="24" font-weight="800">97</text>
+    <text x="395" y="158" fill="#9494b8" font-size="10">/ 108</text>
+    <rect x="342" y="168" width="90" height="4" rx="2" fill="#1e1e3a"/>
+    <rect x="342" y="168" width="80" height="4" rx="2" fill="url(#goldGrad)"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="465" y="110" width="130" height="70" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="487" y="134" fill="#6b6b8d" font-size="9" font-weight="500">ABSENT TODAY</text>
+    <text x="487" y="158" fill="#EF4444" font-size="24" font-weight="800">31</text>
+    <text x="540" y="158" fill="#EF4444" font-size="10">5.3%</text>
+    <rect x="487" y="168" width="90" height="4" rx="2" fill="#1e1e3a"/>
+    <rect x="487" y="168" width="5" height="4" rx="2" fill="#EF4444"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="610" y="110" width="160" height="70" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="632" y="134" fill="#6b6b8d" font-size="9" font-weight="500">TOP ATTENDING CLASS</text>
+    <text x="632" y="156" fill="#f1f1f7" font-size="15" font-weight="700">Grade 5A</text>
+    <text x="632" y="171" fill="#10B981" font-size="11" font-weight="600">98.7%</text>
+    <text x="700" y="171" fill="#6b6b8d" font-size="9">· 42 students</text>
+  </g>
+
+  <!-- Weekly Trend Chart -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="195" width="420" height="190" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="48" y="220" fill="#f1f1f7" font-size="12" font-weight="600">Weekly Attendance Trend</text>
+    <text x="48" y="235" fill="#6b6b8d" font-size="9">% of enrolled students present per week</text>
+
+    <!-- Grid lines -->
+    <line x1="60" y1="256" x2="400" y2="256" stroke="#1e1e3a" stroke-width="0.5"/>
+    <line x1="60" y1="280" x2="400" y2="280" stroke="#1e1e3a" stroke-width="0.5"/>
+    <line x1="60" y1="304" x2="400" y2="304" stroke="#1e1e3a" stroke-width="0.5"/>
+    <line x1="60" y1="328" x2="400" y2="328" stroke="#1e1e3a" stroke-width="0.5"/>
+
+    <!-- Y-axis labels -->
+    <text x="52" y="259" fill="#6b6b8d" font-size="8" text-anchor="end">100%</text>
+    <text x="52" y="283" fill="#6b6b8d" font-size="8" text-anchor="end">95%</text>
+    <text x="52" y="307" fill="#6b6b8d" font-size="8" text-anchor="end">90%</text>
+    <text x="52" y="331" fill="#6b6b8d" font-size="8" text-anchor="end">85%</text>
+
+    <!-- X-axis labels -->
+    <text x="80" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">W1</text>
+    <text x="108" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">W2</text>
+    <text x="137" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">W3</text>
+    <text x="166" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">W4</text>
+    <text x="194" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">W5</text>
+    <text x="223" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">W6</text>
+    <text x="251" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">W7</text>
+    <text x="280" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">W8</text>
+    <text x="309" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">W9</text>
+    <text x="337" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">W10</text>
+    <text x="366" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">W11</text>
+    <text x="394" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">W12</text>
+
+    <!-- Line chart data points (y values mapped: 256-328, lower = higher %) -->
+    <!-- 100%=256, 95%=275, 90%=294, 85%=313, 80%=332 -->
+    <polyline points="80,262 108,270 137,258 166,266 194,275 223,258 251,265 280,268 309,260 337,264 366,259 394,272"
+              fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Dots on line -->
+    <circle cx="80" cy="262" r="3" fill="#D4A017"/>
+    <circle cx="108" cy="270" r="3" fill="#D4A017"/>
+    <circle cx="137" cy="258" r="3" fill="#D4A017"/>
+    <circle cx="166" cy="266" r="3" fill="#D4A017"/>
+    <circle cx="194" cy="275" r="3" fill="#D4A017"/>
+    <circle cx="223" cy="258" r="3" fill="#D4A017"/>
+    <circle cx="251" cy="265" r="3" fill="#D4A017"/>
+    <circle cx="280" cy="268" r="3" fill="#D4A017"/>
+    <circle cx="309" cy="260" r="3" fill="#D4A017"/>
+    <circle cx="337" cy="264" r="3" fill="#D4A017"/>
+    <circle cx="366" cy="259" r="3" fill="#D4A017"/>
+    <circle cx="394" cy="272" r="3" fill="#D4A017"/>
+
+    <!-- Area under line -->
+    <polygon points="80,328 80,262 108,270 137,258 166,266 194,275 223,258 251,265 280,268 309,260 337,264 366,259 394,272 394,328"
+             fill="rgba(212,160,23,0.06)"/>
+
+    <!-- Tooltip hover simulation -->
+    <rect x="355" y="244" width="50" height="20" rx="4" fill="#14142a" stroke="#D4A017" stroke-width="0.5"/>
+    <text x="367" y="257" fill="#D4A017" font-size="9" font-weight="600">97.3%</text>
+  </g>
+
+  <!-- Breakdown by Class -->
+  <g filter="url(#shadow)">
+    <rect x="465" y="195" width="305" height="190" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="483" y="220" fill="#f1f1f7" font-size="12" font-weight="600">Attendance by Class</text>
+    <text x="483" y="235" fill="#6b6b8d" font-size="9">Term average</text>
+
+    <!-- Grade 1A bar -->
+    <text x="483" y="256" fill="#9494b8" font-size="9">Grade 1A</text>
+    <text x="743" y="256" fill="#f1f1f7" font-size="9" font-weight="600" text-anchor="end">96.2%</text>
+    <rect x="483" y="260" width="247" height="6" rx="3" fill="url(#bar2)"/>
+
+    <!-- Grade 2B bar -->
+    <text x="483" y="278" fill="#9494b8" font-size="9">Grade 2B</text>
+    <text x="743" y="278" fill="#f1f1f7" font-size="9" font-weight="600" text-anchor="end">94.8%</text>
+    <rect x="483" y="282" width="240" height="6" rx="3" fill="url(#bar2)"/>
+
+    <!-- Grade 3A bar -->
+    <text x="483" y="300" fill="#9494b8" font-size="9">Grade 3A</text>
+    <text x="743" y="300" fill="#f1f1f7" font-size="9" font-weight="600" text-anchor="end">93.1%</text>
+    <rect x="483" y="304" width="232" height="6" rx="3" fill="url(#goldGrad)"/>
+
+    <!-- Grade 4B bar -->
+    <text x="483" y="322" fill="#9494b8" font-size="9">Grade 4B</text>
+    <text x="743" y="322" fill="#f1f1f7" font-size="9" font-weight="600" text-anchor="end">91.5%</text>
+    <rect x="483" y="326" width="226" height="6" rx="3" fill="url(#goldGrad)"/>
+
+    <!-- Grade 5A bar -->
+    <text x="483" y="344" fill="#9494b8" font-size="9">Grade 5A</text>
+    <text x="743" y="344" fill="#f1f1f7" font-size="9" font-weight="600" text-anchor="end">98.7%</text>
+    <rect x="483" y="348" width="260" height="6" rx="3" fill="url(#bar2)"/>
+
+    <!-- Grade 6B bar -->
+    <text x="483" y="366" fill="#9494b8" font-size="9">Grade 6B</text>
+    <text x="743" y="366" fill="#f1f1f7" font-size="9" font-weight="600" text-anchor="end">89.3%</text>
+    <rect x="483" y="370" width="206" height="6" rx="3" fill="url(#bar3)"/>
+  </g>
+
+  <!-- Bottom Row: Monthly Breakdown Table -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="398" width="740" height="108" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="48" y="422" fill="#f1f1f7" font-size="12" font-weight="600">Monthly Attendance Summary</text>
+
+    <!-- Table header -->
+    <rect x="48" y="430" width="702" height="22" rx="4" fill="#14142a"/>
+    <text x="65" y="444" fill="#6b6b8d" font-size="9" font-weight="600">MONTH</text>
+    <text x="185" y="444" fill="#6b6b8d" font-size="9" font-weight="600">ENROLLED</text>
+    <text x="305" y="444" fill="#6b6b8d" font-size="9" font-weight="600">PRESENT</text>
+    <text x="425" y="444" fill="#6b6b8d" font-size="9" font-weight="600">ABSENT</text>
+    <text x="545" y="444" fill="#6b6b8d" font-size="9" font-weight="600">LATE</text>
+    <text x="665" y="444" fill="#6b6b8d" font-size="9" font-weight="600">%</text>
+
+    <!-- Row 1 -->
+    <text x="65" y="467" fill="#f1f1f7" font-size="10">January</text>
+    <text x="185" y="467" fill="#f1f1f7" font-size="10">568</text>
+    <text x="305" y="467" fill="#10B981" font-size="10" font-weight="600">542</text>
+    <text x="425" y="467" fill="#EF4444" font-size="10">18</text>
+    <text x="545" y="467" fill="#F59E0B" font-size="10">8</text>
+    <text x="665" y="467" fill="#f1f1f7" font-size="10" font-weight="600">95.4%</text>
+
+    <!-- Row 2 -->
+    <text x="65" y="483" fill="#f1f1f7" font-size="10">February</text>
+    <text x="185" y="483" fill="#f1f1f7" font-size="10">572</text>
+    <text x="305" y="483" fill="#10B981" font-size="10" font-weight="600">544</text>
+    <text x="425" y="483" fill="#EF4444" font-size="10">14</text>
+    <text x="545" y="483" fill="#F59E0B" font-size="10">14</text>
+    <text x="665" y="483" fill="#f1f1f7" font-size="10" font-weight="600">95.1%</text>
+
+    <!-- Row 3 -->
+    <text x="65" y="499" fill="#f1f1f7" font-size="10">March</text>
+    <text x="185" y="499" fill="#f1f1f7" font-size="10">580</text>
+    <text x="305" y="499" fill="#10B981" font-size="10" font-weight="600">548</text>
+    <text x="425" y="499" fill="#EF4444" font-size="10">21</text>
+    <text x="545" y="499" fill="#F59E0B" font-size="10">11</text>
+    <text x="665" y="499" fill="#f1f1f7" font-size="10" font-weight="600">94.5%</text>
+  </g>
+</svg>

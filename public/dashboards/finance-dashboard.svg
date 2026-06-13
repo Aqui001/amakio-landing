@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0B1F4D"/>
+      <stop offset="100%" stop-color="#162850"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4A017"/>
+      <stop offset="100%" stop-color="#e8b82a"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="520" rx="12" fill="#0d0d1a"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="52" rx="12" fill="url(#headerGrad)"/>
+  <rect x="0" y="40" width="800" height="12" fill="url(#headerGrad)"/>
+  <circle cx="20" cy="26" r="5" fill="#D4A017"/>
+  <text x="34" y="30" fill="#f1f1f7" font-size="13" font-weight="600">Amakio</text>
+  <text x="80" y="30" fill="#6b6b8d" font-size="11">| School Operating System</text>
+  <rect x="712" y="16" width="68" height="22" rx="11" fill="rgba(212,160,23,0.15)"/>
+  <text x="722" y="31" fill="#D4A017" font-size="10" font-weight="600">FINANCE</text>
+
+  <!-- Title -->
+  <text x="30" y="78" fill="#f1f1f7" font-size="18" font-weight="700">Finance Management</text>
+  <text x="30" y="96" fill="#6b6b8d" font-size="11">Term 2 — 2024/2025 &#160;|&#160; Updated 13 Jun 2026</text>
+
+  <!-- Summary Cards -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="110" width="145" height="70" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="52" y="134" fill="#6b6b8d" font-size="9" font-weight="500">TOTAL COLLECTED</text>
+    <text x="52" y="158" fill="#10B981" font-size="22" font-weight="800">&#8358;8,642,500</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="190" y="110" width="145" height="70" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="212" y="134" fill="#6b6b8d" font-size="9" font-weight="500">OUTSTANDING</text>
+    <text x="212" y="158" fill="#EF4444" font-size="22" font-weight="800">&#8358;1,284,750</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="350" y="110" width="145" height="70" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="372" y="134" fill="#6b6b8d" font-size="9" font-weight="500">COLLECTION RATE</text>
+    <text x="372" y="158" fill="#f1f1f7" font-size="22" font-weight="800">87.1%</text>
+    <text x="460" y="158" fill="#10B981" font-size="9">+5.2%</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="510" y="110" width="145" height="70" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="532" y="134" fill="#6b6b8d" font-size="9" font-weight="500">ENROLLED STUDENTS</text>
+    <text x="532" y="158" fill="#f1f1f7" font-size="22" font-weight="800">584</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="670" y="110" width="100" height="70" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="685" y="134" fill="#6b6b8d" font-size="9" font-weight="500">AVG/STUDENT</text>
+    <text x="685" y="158" fill="#f1f1f7" font-size="14" font-weight="700">&#8358;14,800</text>
+  </g>
+
+  <!-- Revenue Chart -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="195" width="420" height="190" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="48" y="220" fill="#f1f1f7" font-size="12" font-weight="600">Monthly Fee Collection</text>
+    <text x="48" y="235" fill="#6b6b8d" font-size="9">Amount collected vs outstanding per month</text>
+
+    <!-- Grid -->
+    <line x1="60" y1="256" x2="400" y2="256" stroke="#1e1e3a" stroke-width="0.5"/>
+    <line x1="60" y1="280" x2="400" y2="280" stroke="#1e1e3a" stroke-width="0.5"/>
+    <line x1="60" y1="304" x2="400" y2="304" stroke="#1e1e3a" stroke-width="0.5"/>
+    <line x1="60" y1="328" x2="400" y2="328" stroke="#1e1e3a" stroke-width="0.5"/>
+
+    <!-- Y axis -->
+    <text x="52" y="259" fill="#6b6b8d" font-size="8" text-anchor="end">3M</text>
+    <text x="52" y="283" fill="#6b6b8d" font-size="8" text-anchor="end">2M</text>
+    <text x="52" y="307" fill="#6b6b8d" font-size="8" text-anchor="end">1M</text>
+    <text x="52" y="331" fill="#6b6b8d" font-size="8" text-anchor="end">0</text>
+
+    <!-- X axis -->
+    <text x="88" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">Jan</text>
+    <text x="131" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">Feb</text>
+    <text x="174" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">Mar</text>
+    <text x="217" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">Apr</text>
+    <text x="260" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">May</text>
+    <text x="303" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">Jun</text>
+    <text x="346" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">Jul</text>
+    <text x="389" y="342" fill="#6b6b8d" font-size="8" text-anchor="middle">Aug</text>
+
+    <!-- Collected bars (green) - y: 328 to 256 -->
+    <rect x="74" y="268" width="20" height="60" rx="2" fill="url(#greenGrad)"/>
+    <rect x="117" y="274" width="20" height="54" rx="2" fill="url(#greenGrad)"/>
+    <rect x="160" y="264" width="20" height="64" rx="2" fill="url(#greenGrad)"/>
+    <rect x="203" y="272" width="20" height="56" rx="2" fill="url(#greenGrad)"/>
+    <rect x="246" y="266" width="20" height="62" rx="2" fill="url(#greenGrad)"/>
+    <rect x="289" y="260" width="20" height="68" rx="2" fill="url(#greenGrad)"/>
+    <rect x="332" y="276" width="20" height="52" rx="2" fill="url(#greenGrad)"/>
+    <rect x="375" y="270" width="20" height="58" rx="2" fill="url(#greenGrad)"/>
+
+    <!-- Outstanding bars (red) stacked on top -->
+    <rect x="74" y="262" width="20" height="6" rx="2" fill="url(#redGrad)"/>
+    <rect x="117" y="268" width="20" height="6" rx="2" fill="url(#redGrad)"/>
+    <rect x="160" y="258" width="20" height="6" rx="2" fill="url(#redGrad)"/>
+    <rect x="203" y="266" width="20" height="6" rx="2" fill="url(#redGrad)"/>
+    <rect x="246" y="260" width="20" height="6" rx="2" fill="url(#redGrad)"/>
+    <rect x="289" y="254" width="20" height="6" rx="2" fill="url(#redGrad)"/>
+    <rect x="332" y="270" width="20" height="6" rx="2" fill="url(#redGrad)"/>
+    <rect x="375" y="264" width="20" height="6" rx="2" fill="url(#redGrad)"/>
+
+    <!-- Legend -->
+    <rect x="48" y="352" width="8" height="8" rx="2" fill="#10B981"/>
+    <text x="62" y="359" fill="#6b6b8d" font-size="8">Collected</text>
+    <rect x="120" y="352" width="8" height="8" rx="2" fill="#EF4444"/>
+    <text x="134" y="359" fill="#6b6b8d" font-size="8">Outstanding</text>
+  </g>
+
+  <!-- Payment Breakdown -->
+  <g filter="url(#shadow)">
+    <rect x="465" y="195" width="305" height="190" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="483" y="220" fill="#f1f1f7" font-size="12" font-weight="600">Fee Breakdown by Term</text>
+    <text x="483" y="235" fill="#6b6b8d" font-size="9">Per-student fee structure</text>
+
+    <text x="483" y="258" fill="#9494b8" font-size="9">Tuition</text>
+    <text x="740" y="258" fill="#f1f1f7" font-size="9" font-weight="600" text-anchor="end">&#8358;8,500</text>
+    <rect x="483" y="262" width="242" height="6" rx="3" fill="url(#goldGrad)"/>
+
+    <text x="483" y="282" fill="#9494b8" font-size="9">ICT / Lab</text>
+    <text x="740" y="282" fill="#f1f1f7" font-size="9" font-weight="600" text-anchor="end">&#8358;2,000</text>
+    <rect x="483" y="286" width="57" height="6" rx="3" fill="url(#greenGrad)"/>
+
+    <text x="483" y="306" fill="#9494b8" font-size="9">Sports &amp; Extracurricular</text>
+    <text x="740" y="306" fill="#f1f1f7" font-size="9" font-weight="600" text-anchor="end">&#8358;1,500</text>
+    <rect x="483" y="310" width="43" height="6" rx="3" fill="url(#greenGrad)"/>
+
+    <text x="483" y="330" fill="#9494b8" font-size="9">Development Levy</text>
+    <text x="740" y="330" fill="#f1f1f7" font-size="9" font-weight="600" text-anchor="end">&#8358;1,800</text>
+    <rect x="483" y="334" width="51" height="6" rx="3" fill="url(#greenGrad)"/>
+
+    <text x="483" y="354" fill="#9494b8" font-size="9">Examination Fee</text>
+    <text x="740" y="354" fill="#f1f1f7" font-size="9" font-weight="600" text-anchor="end">&#8358;1,000</text>
+    <rect x="483" y="358" width="29" height="6" rx="3" fill="url(#greenGrad)"/>
+
+    <!-- Total -->
+    <line x1="483" y1="370" x2="750" y2="370" stroke="#1e1e3a" stroke-width="0.5"/>
+    <text x="483" y="382" fill="#f1f1f7" font-size="10" font-weight="700">Total per student</text>
+    <text x="740" y="382" fill="#D4A017" font-size="10" font-weight="700" text-anchor="end">&#8358;14,800</text>
+  </g>
+
+  <!-- Bottom row: Recent Transactions -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="398" width="740" height="108" rx="8" fill="#07070e" stroke="#1e1e3a" stroke-width="1"/>
+    <text x="48" y="422" fill="#f1f1f7" font-size="12" font-weight="600">Recent Payments</text>
+
+    <!-- Table header -->
+    <rect x="48" y="430" width="702" height="22" rx="4" fill="#14142a"/>
+    <text x="65" y="444" fill="#6b6b8d" font-size="9" font-weight="600">STUDENT</text>
+    <text x="220" y="444" fill="#6b6b8d" font-size="9" font-weight="600">CLASS</text>
+    <text x="340" y="444" fill="#6b6b8d" font-size="9" font-weight="600">FEE TYPE</text>
+    <text x="490" y="444" fill="#6b6b8d" font-size="9" font-weight="600">DATE</text>
+    <text x="570" y="444" fill="#6b6b8d" font-size="9" font-weight="600">AMOUNT</text>
+    <text x="680" y="444" fill="#6b6b8d" font-size="9" font-weight="600">STATUS</text>
+
+    <!-- Row 1 -->
+    <text x="65" y="467" fill="#f1f1f7" font-size="10">Okafor, Chioma</text>
+    <text x="220" y="467" fill="#9494b8" font-size="10">Grade 5A</text>
+    <text x="340" y="467" fill="#9494b8" font-size="10">Full Tuition</text>
+    <text x="490" y="467" fill="#9494b8" font-size="10">12 Jun 2026</text>
+    <text x="570" y="467" fill="#f1f1f7" font-size="10" font-weight="600">&#8358;14,800</text>
+    <rect x="676" y="458" width="52" height="16" rx="8" fill="rgba(16,185,129,0.15)"/>
+    <text x="685" y="469" fill="#10B981" font-size="9" font-weight="600">Paid</text>
+
+    <!-- Row 2 -->
+    <text x="65" y="483" fill="#f1f1f7" font-size="10">Adebayo, Tunde</text>
+    <text x="220" y="483" fill="#9494b8" font-size="10">Grade 3A</text>
+    <text x="340" y="483" fill="#9494b8" font-size="10">Installment (2/3)</text>
+    <text x="490" y="483" fill="#9494b8" font-size="10">10 Jun 2026</text>
+    <text x="570" y="483" fill="#f1f1f7" font-size="10" font-weight="600">&#8358;5,000</text>
+    <rect x="676" y="474" width="52" height="16" rx="8" fill="rgba(245,158,11,0.15)"/>
+    <text x="685" y="485" fill="#F59E0B" font-size="9" font-weight="600">Partial</text>
+
+    <!-- Row 3 -->
+    <text x="65" y="499" fill="#f1f1f7" font-size="10">Nwachukwu, Somto</text>
+    <text x="220" y="499" fill="#9494b8" font-size="10">Grade 2B</text>
+    <text x="340" y="499" fill="#9494b8" font-size="10">Full Tuition</text>
+    <text x="490" y="499" fill="#9494b8" font-size="10">08 Jun 2026</text>
+    <text x="570" y="499" fill="#f1f1f7" font-size="10" font-weight="600">&#8358;14,800</text>
+    <rect x="676" y="490" width="52" height="16" rx="8" fill="rgba(16,185,129,0.15)"/>
+    <text x="685" y="501" fill="#10B981" font-size="9" font-weight="600">Paid</text>
+  </g>
+</svg>

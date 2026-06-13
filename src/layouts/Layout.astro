@@ -6,7 +6,7 @@ export interface Props {
 const { title, description } = Astro.props;
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,22 +14,49 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <script is:inline>
+      (function() {
+        var theme = localStorage.getItem("amakio-theme");
+        if (theme === "light") {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
     <style>
       @import "tailwindcss";
       :root {
-        --accent: #7c3aed;
-        --accent-light: #a78bfa;
-        --accent-dark: #5b21b6;
-        --surface: #0f0f13;
-        --surface-2: #1a1a24;
-        --surface-3: #24243a;
-        --border: #2a2a40;
+        --primary: #D4A017;
+        --secondary: #D4A017;
+        --primary-light: #e8b82a;
+        --primary-dark: #b8860b;
+        --navy: #0d1b3e;
+        --navy-light: #162850;
+        --nav-bg: rgba(7,7,14,0.9);
+        --surface: #07070e;
+        --surface-2: #0d0d1a;
+        --surface-3: #14142a;
+        --border: #1e1e3a;
+        --card-border: rgba(212,160,23,0.25);
         --text: #f1f1f7;
         --text-muted: #9494b8;
         --text-dim: #6b6b8d;
       }
-      ::selection { background: var(--accent); color: white; }
+      [data-theme="light"] {
+        --navy: #0d1b3e;
+        --navy-light: #162850;
+        --secondary: #D4A017;
+        --nav-bg: rgba(255,255,255,0.9);
+        --surface: #F8FAFC;
+        --surface-2: #FFFFFF;
+        --surface-3: #F1F5F9;
+        --border: #E2E8F0;
+        --card-border: rgba(212,160,23,0.35);
+        --text: #0F172A;
+        --text-muted: #64748B;
+        --text-dim: #94A3B8;
+      }
+      ::selection { background: var(--primary); color: #07070e; }
       html { scroll-behavior: smooth; }
       body {
         font-family: "Inter", system-ui, -apple-system, sans-serif;
@@ -37,10 +64,35 @@ const { title, description } = Astro.props;
         color: var(--text);
         margin: 0;
         -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: background 0.3s, color 0.3s;
       }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+      }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: var(--surface); }
+      ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
+      details > summary { list-style: none; }
+      details > summary::-webkit-details-marker { display: none; }
+      details > summary::marker { display: none; }
+      .theme-sun { display: block; }
+      .theme-moon { display: none; }
+      [data-theme="light"] .theme-sun { display: none; }
+      [data-theme="light"] .theme-moon { display: block; }
     </style>
   </head>
   <body>
     <slot />
+    <script is:inline>
+      function toggleTheme() {
+        var html = document.documentElement;
+        var current = html.getAttribute("data-theme");
+        var next = current === "light" ? "dark" : "light";
+        html.setAttribute("data-theme", next);
+        localStorage.setItem("amakio-theme", next);
+      }
+    </script>
   </body>
 </html>

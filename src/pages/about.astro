@@ -1,47 +1,47 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const year = new Date().getFullYear();
 ---
 
-<Layout title="About — Amakio Founder" description="Aquilo-Dominic Godwin Udo — Educator, Educational Consultant, Data Analyst, Web Developer. Building Amakio to help African schools run better.">
-  <nav class="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl" style="border-color: var(--border); background: rgba(15,15,19,0.8);">
+<Layout title="About — Aquilo-Dominic Godwin Udo, Founder of Amakio" description="Aquilo-Dominic Godwin Udo — Founder of Amakio, Educational Consultant, Curriculum Development Specialist, Data Analyst, Web Developer, and Christian Mentor.">
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl" style="border-color: var(--border); background: rgba(7,7,14,0.9);">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-      <a href="/" class="text-lg font-bold tracking-tight" style="color: var(--text);">amakio</a>
-      <div class="flex items-center gap-6">
-        <a href="/" class="text-sm font-medium transition-colors" style="color: var(--text-muted); &:hover { color: var(--text); }">Home</a>
-        <a href="https://amakio-frontend.vercel.app" class="rounded-lg px-4 py-2 text-sm font-semibold text-white transition-all" style="background: var(--accent); &:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(124,58,237,0.3); }">Get Started</a>
+      <a href="/" class="text-lg font-extrabold tracking-tight" style="color: var(--primary);">amakio</a>
+      <div class="flex items-center gap-8">
+        <a href="/" class="hidden text-sm font-medium transition-colors md:block" style="color: var(--text-muted); &:hover { color: var(--primary); }">Home</a>
+        <button onclick="toggleTheme()" class="flex h-9 w-9 items-center justify-center rounded-lg transition-all" style="border: 1px solid var(--border); color: var(--text-muted); &:hover { border-color: var(--primary); color: var(--primary); }">
+          <svg class="theme-sun h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg class="theme-moon h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <a href="https://amakio-frontend.vercel.app" class="rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition-all" style="background: var(--primary); &:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(212,160,23,0.25); }">Get Started</a>
       </div>
     </div>
   </nav>
 
   <main class="pt-24">
-    <!-- Founder Hero -->
-    <section class="px-6 py-16 md:py-24">
+    <!-- Hero -->
+    <section class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-4xl">
-        <div class="flex flex-col items-center gap-8 md:flex-row md:items-start">
-          <div class="h-48 w-48 flex-shrink-0 overflow-hidden rounded-2xl border-2" style="border-color: var(--accent);">
-            <div class="flex h-full w-full items-center justify-center text-5xl font-bold" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">AD</div>
+        <div class="flex flex-col items-center gap-10 md:flex-row md:items-start">
+          <div class="h-52 w-52 flex-shrink-0 overflow-hidden rounded-2xl border-2" style="border-color: var(--secondary);">
+            <img src="/Aquilo-Dominic.png" alt="Aquilo-Dominic Godwin Udo" class="h-full w-full rounded-2xl object-cover">
           </div>
           <div>
-            <p class="mb-1 text-sm font-semibold uppercase tracking-widest" style="color: var(--accent-light);">Founder &amp; Developer</p>
-            <h1 class="mb-3 text-3xl font-bold md:text-4xl" style="color: var(--text);">Aquilo-Dominic Godwin Udo</h1>
-            <p class="mb-4 text-lg leading-relaxed" style="color: var(--text-muted);">
-              Educator. Educational Consultant. Data Analyst. Web Developer.
-            </p>
-            <p class="mb-6 leading-relaxed" style="color: var(--text-muted);">
-              I built Amakio because I saw firsthand how many African schools still rely on scattered filing cabinets,
-              lost records, and manual report cards. Every child deserves a school that runs well — and every teacher
-              deserves tools that make their job easier, not harder.
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="https://linkedin.com/in/aquilo-dominic" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all" style="color: var(--text); border: 1px solid var(--border); &:hover { border-color: var(--accent); }">
+            <p class="mb-1 text-xs font-semibold uppercase tracking-widest" style="color: var(--secondary);">Founder — Amakio</p>
+            <h1 class="mb-2 text-3xl font-extrabold tracking-tight md:text-4xl" style="color: var(--text);">Aquilo-Dominic<br />Godwin Udo</h1>
+            <p class="mb-4 text-base leading-relaxed" style="color: var(--text-muted);">Empowered by Faith. Driven by Purpose. Committed to Excellence.</p>
+            <p class="mb-6 max-w-xl text-sm leading-relaxed" style="color: var(--text-dim);">Integrating Education, Technology, and Ministry for Transformational Impact.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://amakio-frontend.vercel.app" class="rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition-all" style="background: var(--primary); &:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(212,160,23,0.25); }">Explore Amakio</a>
+              <a href="https://linkedin.com/in/aquilo-dominic" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-all" style="color: var(--primary); border: 1px solid var(--border); &:hover { border-color: var(--secondary); }">
                 <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 LinkedIn
               </a>
-              <a href="https://github.com/Aqui001" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all" style="color: var(--text); border: 1px solid var(--border); &:hover { border-color: var(--accent); }">
+              <a href="https://github.com/Aqui001" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-all" style="color: var(--primary); border: 1px solid var(--border); &:hover { border-color: var(--secondary); }">
                 <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
                 GitHub
               </a>
-              <a href="mailto:officialaquilo@outlook.com" class="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all" style="color: var(--text); border: 1px solid var(--border); &:hover { border-color: var(--accent); }">
+              <a href="mailto:officialaquilo@outlook.com" class="flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-all" style="color: var(--primary); border: 1px solid var(--border); &:hover { border-color: var(--secondary); }">
                 <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 Email
               </a>
@@ -51,145 +51,335 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <!-- Story -->
-    <section class="border-y px-6 py-16" style="border-color: var(--border);">
+    <!-- Mission -->
+    <section class="border-y px-6 py-16" style="border-color: var(--border); background: var(--surface-2);">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="mb-2 text-xs font-semibold uppercase tracking-widest" style="color: var(--secondary);">Personal Mission</p>
+        <h2 class="mb-6 text-2xl font-bold md:text-3xl" style="color: var(--text);">Equipping minds. Transforming lives. Advancing God's Kingdom through education, mentorship, leadership, and technology.</h2>
+        <div class="mx-auto max-w-xl text-sm leading-relaxed" style="color: var(--text-muted);">
+          <p>Visionary and multi-disciplinary Educator, Educational Consultant, Data Analyst, Web Developer, Curriculum Developer, Christian Mentor, and Counselor with extensive experience in educational leadership, institutional development, teacher capacity building, academic research, and digital innovation.</p>
+          <p class="mt-4">Skilled in designing educational systems, developing curriculum frameworks, training educators, implementing technology solutions, and leading faith-based mentorship initiatives. Passionate about leveraging education, technology, and ministry to create sustainable impact within schools, communities, and organisations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="px-6 py-20">
       <div class="mx-auto max-w-3xl">
-        <h2 class="mb-8 text-2xl font-bold" style="color: var(--text);">My story</h2>
-        <div class="space-y-4 leading-relaxed" style="color: var(--text-muted);">
+        <h2 class="mb-8 text-2xl font-bold" style="color: var(--text);">The story behind Amakio</h2>
+        <div class="space-y-5 leading-relaxed" style="color: var(--text-muted);">
           <p>
-            I grew up in Uyo, Akwa Ibom State, where I attended primary and secondary school before earning my B.A.Ed. in
-            English Education from the University of Uyo. From a young age, I was drawn to two things: teaching and
-            building.
+            I grew up in Uyo, Akwa Ibom State, where I attended primary and secondary school before earning my B.A.Ed. in English Education from the University of Uyo. From a young age, I was drawn to two things: teaching and building.
           </p>
           <p>
-            For years I worked across classrooms and school offices — helping students learn, designing curricula, and
-            watching administrators struggle with mountains of paper records. I saw schools lose exam results, double-pay
-            teachers, and spend weeks compiling report cards by hand.
+            For years I worked across classrooms and school offices — helping students learn, designing curricula, and watching administrators struggle with mountains of paper records. I saw schools lose exam results, double-pay teachers, and spend weeks compiling report cards by hand. I knew technology could solve this, so I taught myself to code.
           </p>
           <p>
-            I knew technology could solve this. So I taught myself to code — starting with HTML and CSS, then JavaScript,
-            TypeScript, Python, and full-stack development with Node.js, React, and PostgreSQL. I built systems for
-            educational consulting first, then realised the real gap wasn't consulting tools — it was school management
-            software built for how African schools actually work.
+            The real turning point was my son's birth. Holding Amakan — his name means <em>overcomer</em> — I found myself thinking about the future. What kind of education would his generation receive? I imagined a system where he could attend lessons and have everything in one place. Where I could follow his growth just by tapping my device. Where I could view reports and download them without calling to book appointments, without queues, without waiting.
           </p>
           <p>
-            That realisation became Amakio. I set out to build a platform that handles everything — from nursery
-            developmental tracking and admissions to report cards and fee management — in a single, secure, easy-to-use
-            system.
+            That vision became <strong style="color: var(--text);">Amakio</strong> — the overcomer's hub. A platform where the next generation can access their education without the obstacles my generation faced. Every feature I build, I build for Amakan. And for every child who deserves a school that works as hard as they do.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Experience & skills -->
-    <section class="px-6 py-16">
+    <!-- Core Expertise -->
+    <section class="border-y px-6 py-20" style="border-color: var(--border); background: var(--surface-2);">
+      <div class="mx-auto max-w-6xl">
+        <h2 class="mb-4 text-center text-3xl font-bold" style="color: var(--text);">Core Expertise</h2>
+        <p class="mb-12 text-center" style="color: var(--text-muted);">Five domains of professional practice.</p>
+        <div class="grid gap-5 md:grid-cols-5">
+          <div class="rounded-xl border p-6 text-center transition-all" style="border-color: var(--card-border); background: var(--surface); &:hover { border-color: var(--secondary); transform: translateY(-3px); }">
+            <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full" style="background: rgba(212,160,23,0.08);">
+              <svg class="h-6 w-6" style="color: var(--primary);" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <h3 class="mb-1 text-sm font-semibold" style="color: var(--text);">Education</h3>
+            <p class="text-xs" style="color: var(--text-dim);">Educational Consulting, School Setup, Teacher Training, Academic Administration, School Management</p>
+          </div>
+          <div class="rounded-xl border p-6 text-center transition-all" style="border-color: var(--card-border); background: var(--surface); &:hover { border-color: var(--secondary); transform: translateY(-3px); }">
+            <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full" style="background: rgba(212,160,23,0.08);">
+              <svg class="h-6 w-6" style="color: var(--primary);" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+            </div>
+            <h3 class="mb-1 text-sm font-semibold" style="color: var(--text);">Curriculum</h3>
+            <p class="text-xs" style="color: var(--text-dim);">Curriculum Development, Instructional Design, Learning Outcomes, Assessment Design, Quality Assurance</p>
+          </div>
+          <div class="rounded-xl border p-6 text-center transition-all" style="border-color: var(--card-border); background: var(--surface); &:hover { border-color: var(--secondary); transform: translateY(-3px); }">
+            <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full" style="background: rgba(212,160,23,0.08);">
+              <svg class="h-6 w-6" style="color: var(--primary);" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <h3 class="mb-1 text-sm font-semibold" style="color: var(--text);">Technology</h3>
+            <p class="text-xs" style="color: var(--text-dim);">HTML, CSS, JavaScript, Git, Web Development, EdTech Platforms, System Architecture</p>
+          </div>
+          <div class="rounded-xl border p-6 text-center transition-all" style="border-color: var(--card-border); background: var(--surface); &:hover { border-color: var(--secondary); transform: translateY(-3px); }">
+            <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full" style="background: rgba(212,160,23,0.08);">
+              <svg class="h-6 w-6" style="color: var(--primary);" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <h3 class="mb-1 text-sm font-semibold" style="color: var(--text);">Research</h3>
+            <p class="text-xs" style="color: var(--text-dim);">Educational Research, Data Analytics, Statistical Analysis, Data Visualisation, Academic Writing</p>
+          </div>
+          <div class="rounded-xl border p-6 text-center transition-all" style="border-color: var(--card-border); background: var(--surface); &:hover { border-color: var(--secondary); transform: translateY(-3px); }">
+            <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full" style="background: rgba(212,160,23,0.08);">
+              <svg class="h-6 w-6" style="color: var(--primary);" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </div>
+            <h3 class="mb-1 text-sm font-semibold" style="color: var(--text);">Ministry</h3>
+            <p class="text-xs" style="color: var(--text-dim);">Christian Mentorship, Counseling, Church Leadership, Spiritual Formation, Discipleship</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="px-6 py-20">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-12 text-center text-2xl font-bold" style="color: var(--text);">Experience &amp; Skills</h2>
-        <div class="grid gap-8 md:grid-cols-2">
-          <div>
-            <h3 class="mb-4 text-lg font-semibold" style="color: var(--text);">Experience</h3>
-            <div class="space-y-6">
-              <div>
-                <p class="font-medium" style="color: var(--text);">Founder &amp; Developer — Amakio</p>
-                <p class="text-sm" style="color: var(--text-dim);">2024 – Present</p>
-                <p class="mt-1 text-sm" style="color: var(--text-muted);">Building a school management platform for African schools. Full-stack development, product design, and deployment.</p>
+        <h2 class="mb-12 text-center text-3xl font-bold" style="color: var(--text);">Experience</h2>
+        <div class="relative space-y-0">
+          <div class="absolute left-[19px] top-0 h-full w-px" style="background: var(--border);"></div>
+
+          <div class="relative mb-8 pl-12">
+            <div class="absolute left-2.5 top-6 h-3.5 w-3.5 rounded-full border-2" style="border-color: var(--primary); background: var(--surface);"></div>
+            <div class="rounded-xl border p-6" style="border-color: var(--card-border); &:hover { border-color: var(--secondary); }">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="text-lg font-semibold" style="color: var(--text);">Founder & Product Architect</h3>
+                <span class="text-xs font-medium" style="color: var(--secondary);">2024 — Present</span>
               </div>
-              <div>
-                <p class="font-medium" style="color: var(--text);">Educational Consultant</p>
-                <p class="text-sm" style="color: var(--text-dim);">2020 – Present</p>
-                <p class="mt-1 text-sm" style="color: var(--text-muted);">Curriculum design, school system evaluation, and teacher training for private schools in Akwa Ibom.</p>
-              </div>
-              <div>
-                <p class="font-medium" style="color: var(--text);">Educator — English Language &amp; Literature</p>
-                <p class="text-sm" style="color: var(--text-dim);">2018 – Present</p>
-                <p class="mt-1 text-sm" style="color: var(--text-muted);">Teaching English Language and Literature-in-English at secondary school level. Lesson planning, exam development, and student mentoring.</p>
-              </div>
+              <p class="mb-1 text-sm font-semibold" style="color: var(--primary);">Amakio</p>
+              <p class="text-sm leading-relaxed" style="color: var(--text-muted);">Building a comprehensive educational technology platform that digitises school administration, academic management, communication, analytics, and institutional growth. Product design, system architecture, and full-stack development.</p>
             </div>
           </div>
-          <div>
-            <h3 class="mb-4 text-lg font-semibold" style="color: var(--text);">Skills</h3>
-            <div class="space-y-4">
-              <div>
-                <p class="mb-2 text-sm font-medium" style="color: var(--text);">Frontend</p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">React</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">TypeScript</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Tailwind CSS</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Astro</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Vue</span>
-                </div>
+
+          <div class="relative mb-8 pl-12">
+            <div class="absolute left-2.5 top-6 h-3.5 w-3.5 rounded-full border-2" style="border-color: var(--primary); background: var(--surface);"></div>
+            <div class="rounded-xl border p-6" style="border-color: var(--card-border); &:hover { border-color: var(--secondary); }">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="text-lg font-semibold" style="color: var(--text);">Educational Consultant & Entrepreneur</h3>
+                <span class="text-xs font-medium" style="color: var(--secondary);">2024 — Present</span>
               </div>
-              <div>
-                <p class="mb-2 text-sm font-medium" style="color: var(--text);">Backend</p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Node.js</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Nitro</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Python</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">PostgreSQL</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Prisma</span>
-                </div>
-              </div>
-              <div>
-                <p class="mb-2 text-sm font-medium" style="color: var(--text);">Data &amp; Analysis</p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">SQL</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Excel</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Pandas</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Power BI</span>
-                </div>
-              </div>
-              <div>
-                <p class="mb-2 text-sm font-medium" style="color: var(--text);">Education</p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Curriculum Design</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Exam Development</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">Teacher Training</span>
-                  <span class="rounded-md px-3 py-1 text-xs font-medium" style="background: rgba(124,58,237,0.1); color: var(--accent-light);">EdTech Consulting</span>
-                </div>
-              </div>
+              <p class="mb-1 text-sm font-semibold" style="color: var(--primary);">Independent Practice</p>
+              <p class="text-sm leading-relaxed" style="color: var(--text-muted);">School setup consulting, curriculum design, regulatory alignment, teacher training, capacity building, institutional planning, talent development, and educational strategy.</p>
             </div>
+          </div>
+
+          <div class="relative mb-8 pl-12">
+            <div class="absolute left-2.5 top-6 h-3.5 w-3.5 rounded-full border-2" style="border-color: var(--primary); background: var(--surface);"></div>
+            <div class="rounded-xl border p-6" style="border-color: var(--card-border); &:hover { border-color: var(--secondary); }">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="text-lg font-semibold" style="color: var(--text);">Curriculum Development & Management Specialist</h3>
+                <span class="text-xs font-medium" style="color: var(--secondary);">2024 — Present</span>
+              </div>
+              <p class="mb-1 text-sm font-semibold" style="color: var(--primary);">Independent Practice</p>
+              <p class="text-sm leading-relaxed" style="color: var(--text-muted);">Curriculum design, academic planning, learning pathway creation, outcome mapping, curriculum implementation and review, and assessment development.</p>
+            </div>
+          </div>
+
+          <div class="relative mb-8 pl-12">
+            <div class="absolute left-2.5 top-6 h-3.5 w-3.5 rounded-full border-2" style="border-color: var(--primary); background: var(--surface);"></div>
+            <div class="rounded-xl border p-6" style="border-color: var(--card-border); &:hover { border-color: var(--secondary); }">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="text-lg font-semibold" style="color: var(--text);">Educational Researcher & Data Consultant</h3>
+                <span class="text-xs font-medium" style="color: var(--secondary);">2025 — Present</span>
+              </div>
+              <p class="mb-1 text-sm font-semibold" style="color: var(--primary);">Independent Practice</p>
+              <p class="text-sm leading-relaxed" style="color: var(--text-muted);">Educational research, correlational studies, dataset management, statistical reporting, academic writing support, thesis development, and educational evaluation.</p>
+            </div>
+          </div>
+
+          <div class="relative mb-8 pl-12">
+            <div class="absolute left-2.5 top-6 h-3.5 w-3.5 rounded-full border-2" style="border-color: var(--primary); background: var(--surface);"></div>
+            <div class="rounded-xl border p-6" style="border-color: var(--card-border); &:hover { border-color: var(--secondary); }">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="text-lg font-semibold" style="color: var(--text);">Professional Educator</h3>
+                <span class="text-xs font-medium" style="color: var(--secondary);">2020 — 2024</span>
+              </div>
+              <p class="mb-1 text-sm font-semibold" style="color: var(--primary);">Secondary Schools, Akwa Ibom</p>
+              <p class="text-sm leading-relaxed" style="color: var(--text-muted);">English Language instruction, literacy development, critical thinking development, academic mentoring, student counseling, and classroom management.</p>
+            </div>
+          </div>
+
+          <div class="relative pl-12">
+            <div class="absolute left-2.5 top-6 h-3.5 w-3.5 rounded-full border-2" style="border-color: var(--primary); background: var(--surface);"></div>
+            <div class="rounded-xl border p-6" style="border-color: var(--card-border); &:hover { border-color: var(--secondary); }">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="text-lg font-semibold" style="color: var(--text);">Community Leader & Program Coordinator</h3>
+                <span class="text-xs font-medium" style="color: var(--secondary);">2021 — Present</span>
+              </div>
+              <p class="mb-1 text-sm font-semibold" style="color: var(--primary);">ARISE ICT Hub & Volunteers Group</p>
+              <p class="text-sm leading-relaxed" style="color: var(--text-muted);">Digital literacy programs, ICT capacity development, community mobilization, volunteer coordination, branding support, and event management.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Project: Amakio -->
+    <section class="border-y px-6 py-20" style="border-color: var(--border); background: var(--surface-2);">
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-2 text-center">
+          <p class="mb-2 text-xs font-semibold uppercase tracking-widest" style="color: var(--secondary);">Featured Project</p>
+          <h2 class="mb-4 text-3xl font-bold" style="color: var(--text);">Amakio</h2>
+          <p class="mx-auto mb-10 max-w-xl" style="color: var(--text-muted);">School Management Ecosystem — the platform I built to transform how schools operate.</p>
+        </div>
+
+        <div class="mx-auto mb-10 max-w-4xl rounded-xl border p-10 text-center" style="border-color: var(--card-border); background: var(--surface);">
+          <p class="mb-2 text-xs font-semibold uppercase tracking-widest" style="color: var(--secondary);">Vision</p>
+          <p class="text-xl font-bold" style="color: var(--text);">Become the world's most trusted educational operating system.</p>
+        </div>
+
+        <h3 class="mb-6 text-center text-lg font-semibold" style="color: var(--text);">Key Modules</h3>
+        <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-5">
+          <div class="rounded-lg border p-4 text-center" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="text-sm font-semibold" style="color: var(--text);">Student Management</p>
+          </div>
+          <div class="rounded-lg border p-4 text-center" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="text-sm font-semibold" style="color: var(--text);">Staff Management</p>
+          </div>
+          <div class="rounded-lg border p-4 text-center" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="text-sm font-semibold" style="color: var(--text);">Attendance</p>
+          </div>
+          <div class="rounded-lg border p-4 text-center" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="text-sm font-semibold" style="color: var(--text);">Results Processing</p>
+          </div>
+          <div class="rounded-lg border p-4 text-center" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="text-sm font-semibold" style="color: var(--text);">CBT System</p>
+          </div>
+          <div class="rounded-lg border p-4 text-center" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="text-sm font-semibold" style="color: var(--text);">Finance Management</p>
+          </div>
+          <div class="rounded-lg border p-4 text-center" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="text-sm font-semibold" style="color: var(--text);">Parent Portal</p>
+          </div>
+          <div class="rounded-lg border p-4 text-center" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="text-sm font-semibold" style="color: var(--text);">Communication Hub</p>
+          </div>
+          <div class="rounded-lg border p-4 text-center" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="text-sm font-semibold" style="color: var(--text);">Learning Management</p>
+          </div>
+          <div class="rounded-lg border p-4 text-center" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="text-sm font-semibold" style="color: var(--text);">Analytics Dashboard</p>
+          </div>
+        </div>
+
+        <div class="mt-10 text-center">
+          <a href="https://amakio-frontend.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-block rounded-lg px-8 py-3.5 text-base font-semibold text-white transition-all" style="background: var(--primary); &:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(212,160,23,0.3); }">
+            Explore Amakio ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ministry & Leadership -->
+    <section class="px-6 py-20">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-4 text-center text-3xl font-bold" style="color: var(--text);">Ministry & Leadership</h2>
+        <p class="mb-12 text-center" style="color: var(--text-muted);">Faith-driven service and community development.</p>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-xl border p-6" style="border-color: var(--card-border); background: var(--surface-2);">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg" style="background: rgba(212,160,23,0.08);">
+              <svg class="h-5 w-5" style="color: var(--primary);" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </div>
+            <h3 class="mb-2 text-base font-semibold" style="color: var(--text);">Christian Mentor & Counselor</h3>
+            <p class="mb-1 text-xs font-semibold" style="color: var(--secondary);">Gibbor Prophetic Ministries — 2021 to Present</p>
+            <p class="text-sm leading-relaxed" style="color: var(--text-muted);">Biblical counseling, mentorship, leadership development, spiritual growth coaching, discipleship programs, and prayer support.</p>
+          </div>
+          <div class="rounded-xl border p-6" style="border-color: var(--card-border); background: var(--surface-2);">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg" style="background: rgba(212,160,23,0.08);">
+              <svg class="h-5 w-5" style="color: var(--primary);" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3 class="mb-2 text-base font-semibold" style="color: var(--text);">Community Leader & Program Coordinator</h3>
+            <p class="mb-1 text-xs font-semibold" style="color: var(--secondary);">ARISE ICT Hub & Volunteers Group</p>
+            <p class="text-sm leading-relaxed" style="color: var(--text-muted);">Digital literacy programs, ICT capacity development, community mobilization, volunteer coordination, branding support, and event management.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Education -->
-    <section class="border-y px-6 py-16" style="border-color: var(--border);">
-      <div class="mx-auto max-w-3xl">
-        <h2 class="mb-8 text-center text-2xl font-bold" style="color: var(--text);">Education</h2>
-        <div class="text-center">
-          <p class="text-lg font-semibold" style="color: var(--text);">B.A.Ed. English Education</p>
-          <p class="text-sm" style="color: var(--text-dim);">University of Uyo, Akwa Ibom State</p>
-          <p class="mt-4 leading-relaxed" style="color: var(--text-muted);">
-            My background in education gives me a unique perspective on school management software.
-            I understand the problems because I've lived them — in the classroom, in the staff room,
-            and in the principal's office.
-          </p>
+    <section class="border-y px-6 py-20" style="border-color: var(--border); background: var(--surface-2);">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-center text-3xl font-bold" style="color: var(--text);">Education</h2>
+        <div class="grid gap-5 md:grid-cols-3">
+          <div class="rounded-xl border p-6" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="mb-1 text-sm font-semibold" style="color: var(--secondary);">Bachelor of Arts</p>
+            <h3 class="mb-1 text-base font-semibold" style="color: var(--text);">English Education</h3>
+            <p class="text-sm" style="color: var(--text-dim);">University of Uyo</p>
+          </div>
+          <div class="rounded-xl border p-6" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="mb-1 text-sm font-semibold" style="color: var(--secondary);">Bachelor of Arts</p>
+            <h3 class="mb-1 text-base font-semibold" style="color: var(--text);">Church Planting & Christian Leadership</h3>
+            <p class="text-sm" style="color: var(--text-dim);">Kingdom Life University</p>
+          </div>
+          <div class="rounded-xl border p-6" style="border-color: var(--card-border); background: var(--surface);">
+            <p class="mb-1 text-sm font-semibold" style="color: var(--secondary);">National Diploma</p>
+            <h3 class="mb-1 text-base font-semibold" style="color: var(--text);">Christian Education</h3>
+            <p class="text-sm" style="color: var(--text-dim);">Kingdom Life University</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="px-6 py-16 text-center">
+    <!-- Contact CTA -->
+    <section class="px-6 py-24 text-center" style="background: var(--navy);">
       <div class="mx-auto max-w-2xl">
-        <h2 class="mb-4 text-2xl font-bold" style="color: var(--text);">Let's build better schools together</h2>
-        <p class="mb-8" style="color: var(--text-muted);">
-          Whether you're a school looking for a better management system or an educator who wants to collaborate, I'd love to hear from you.
-        </p>
-        <a href="mailto:officialaquilo@outlook.com" class="inline-block rounded-lg px-8 py-3.5 text-base font-semibold text-white transition-all" style="background: var(--accent); &:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(124,58,237,0.35); }">
-          Get in touch
-        </a>
+        <h2 class="mb-4 text-3xl font-bold text-white">Let's work together</h2>
+        <p class="mb-8 text-white" style="opacity: 0.85;">Whether you're a school looking for a better management system, an educator seeking consulting, or an organisation exploring collaboration — I'd love to hear from you.</p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://cal.com/aquilo-dominic" target="_blank" rel="noopener noreferrer" class="inline-block rounded-lg px-8 py-3.5 text-base font-semibold transition-all" style="background: var(--secondary); color: white; &:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }">
+            Book a consultation
+          </a>
+          <a href="mailto:officialaquilo@outlook.com" class="inline-block rounded-lg px-8 py-3.5 text-base font-semibold text-white transition-all" style="border: 1px solid rgba(255,255,255,0.3); &:hover { border-color: var(--secondary); }">
+            Send an email
+          </a>
+        </div>
+        <div class="mt-8 flex items-center justify-center gap-6 text-sm" style="color: rgba(255,255,255,0.7);">
+          <span>+234 901 288 8600</span>
+          <span class="hidden md:inline">|</span>
+          <span>Uyo, Akwa Ibom State, Nigeria</span>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="px-6 py-12" style="background: var(--surface-2);">
-    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 md:flex-row">
-      <a href="/" class="text-sm font-semibold" style="color: var(--text);">amakio</a>
-      <div class="flex items-center gap-6 text-sm" style="color: var(--text-dim);">
-        <a href="/" class="transition-colors" style="&:hover { color: var(--text-muted); }">Home</a>
-        <a href="mailto:officialaquilo@outlook.com" class="transition-colors" style="&:hover { color: var(--text-muted); }">Contact</a>
-        <span>&copy; {new Date().getFullYear()} Amakio</span>
+  <footer class="border-t px-6 py-12" style="border-color: var(--border); background: var(--surface-2);">
+    <div class="mx-auto max-w-6xl">
+      <div class="grid gap-8 md:grid-cols-4">
+        <div>
+          <p class="mb-3 text-base font-extrabold tracking-tight" style="color: var(--primary);">amakio</p>
+          <p class="max-w-xs text-sm leading-relaxed" style="color: var(--text-dim);">The school operating system for modern education.</p>
+        </div>
+        <div>
+          <p class="mb-3 text-xs font-semibold uppercase tracking-widest" style="color: var(--text-dim);">Product</p>
+          <div class="space-y-2 text-sm" style="color: var(--text-muted);">
+            <a href="/#modules" class="block transition-colors" style="&:hover { color: var(--primary); }">Modules</a>
+            <a href="/#pricing" class="block transition-colors" style="&:hover { color: var(--primary); }">Pricing</a>
+            <a href="https://amakio-frontend.vercel.app" class="block transition-colors" style="&:hover { color: var(--primary); }">Sign in</a>
+          </div>
+        </div>
+        <div>
+          <p class="mb-3 text-xs font-semibold uppercase tracking-widest" style="color: var(--text-dim);">Company</p>
+          <div class="space-y-2 text-sm" style="color: var(--text-muted);">
+            <a href="/about" class="block transition-colors" style="&:hover { color: var(--primary); }">About</a>
+            <a href="mailto:officialaquilo@outlook.com" class="block transition-colors" style="&:hover { color: var(--primary); }">Contact</a>
+          </div>
+        </div>
+        <div>
+          <p class="mb-3 text-xs font-semibold uppercase tracking-widest" style="color: var(--text-dim);">Contact</p>
+          <div class="space-y-2 text-sm" style="color: var(--text-dim);">
+            <p>officialaquilo@outlook.com</p>
+            <p>+234 901 288 8600</p>
+            <p>Uyo, Akwa Ibom State, Nigeria</p>
+            <div class="flex items-center gap-3 pt-1">
+              <a href="https://linkedin.com/in/aquilo-dominic" target="_blank" rel="noopener noreferrer" class="transition-colors" style="&:hover { color: var(--primary); }">
+                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://github.com/Aqui001" target="_blank" rel="noopener noreferrer" class="transition-colors" style="&:hover { color: var(--primary); }">
+                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 border-t pt-6 text-center text-sm" style="border-color: var(--border); color: var(--text-dim);">
+        &copy; {year} Amakio. All rights reserved.
       </div>
     </div>
   </footer>
