@@ -1,0 +1,17 @@
+---
+export interface Props {
+  icon: string;
+  title: string;
+  description: string;
+}
+const { icon, title, description } = Astro.props;
+---
+<div class="feature-card group rounded-2xl p-6 md:p-8 border" style="background: var(--surface-2); border-color: var(--border);">
+  <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300" style="background: rgba(124,58,237,0.1);">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d={icon} />
+    </svg>
+  </div>
+  <h3 class="text-lg font-semibold mb-2">{title}</h3>
+  <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{description}</p>
+</div>

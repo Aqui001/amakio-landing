@@ -1,0 +1,46 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      @import "tailwindcss";
+      :root {
+        --accent: #7c3aed;
+        --accent-light: #a78bfa;
+        --accent-dark: #5b21b6;
+        --surface: #0f0f13;
+        --surface-2: #1a1a24;
+        --surface-3: #24243a;
+        --border: #2a2a40;
+        --text: #f1f1f7;
+        --text-muted: #9494b8;
+        --text-dim: #6b6b8d;
+      }
+      ::selection { background: var(--accent); color: white; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        background: var(--surface);
+        color: var(--text);
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
